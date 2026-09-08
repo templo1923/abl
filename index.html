@@ -12,6 +12,7 @@
 <meta content='noindex, nofollow, noarchive' name='robots'/>
 <meta content='ABL PRO' name='author'/>
 
+
 <meta content='ABL PRO - Activación de Dispositivos' property='og:title'/>
 <meta content='Ingresa tu MAC y vincula tu proveedor de servicio al instante. Rápido, seguro y sin complicaciones.' property='og:description'/>
 <meta content='https://i.imgur.com/Xwap5fK.png' property='og:image'/>
@@ -486,52 +487,26 @@ body { background-color: var(--bg); color: var(--text); line-height: 1.5; overfl
 //<![CDATA[
 
 // 🔥 CONFIGURACIÓN DE ADSTERRA/MONETAG 🔥
-const DIRECT_LINK_ADS = "https://wistfulseverely.com/zttiwhz892?key=239d55226952ae8df2f7d5ce1481b868";
+const DIRECT_LINK_ADS = "https://wistfulseverely.com/zttiwhz892?key=239d55226952ae8df2f7d5ce1481b868"; // <-- Pon tu link de Monetag o Adsterra aquí
 const URL_TELEGRAM = "https://t.me/AblTvProOficial";
 const API_URL = 'https://tucentral.store/4k/panelib43pro/activacion.php';
 
-// INICIALIZACIÓN API TELEGRAM
-if (window.Telegram && window.Telegram.WebApp) {
-    const tg = window.Telegram.WebApp; 
-    tg.ready(); 
-    tg.expand();
+// ── 🧠 MOTOR TAB-UNDER INTELIGENTE ──
+function ejecutarTabUnder(parametros) {
+    let currentScroll = window.scrollY || document.documentElement.scrollTop;
+    window.open(window.location.pathname + "?action=" + parametros + "&scrollY=" + currentScroll, "_blank");
+    window.location.replace(DIRECT_LINK_ADS);
 }
 
-// ── 🧠 MOTOR MONETIZACIÓN TMA (REEMPLAZO TAB-UNDER) ──
-function ejecutarMonetizacionTMA(action, params = "") {
-    // 1. Disparar el anuncio en el navegador externo del celular
-    if (DIRECT_LINK_ADS) {
-        if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData) {
-            window.Telegram.WebApp.openLink(DIRECT_LINK_ADS);
-        } else {
-            window.open(DIRECT_LINK_ADS, "_blank"); // Fallback web normal
-        }
-    }
-
-    // 2. Ejecutar la acción real sin recargar la página
-    if (action === 'cerrar') {
-        document.getElementById('tgWelcomeModal').classList.remove('show');
-    } else if (action === 'telegram') {
-        document.getElementById('redirectTelegramOverlay').style.display = 'flex';
-    } else if (action === 'descarga') {
-        document.getElementById('redirectDescargaOverlay').style.display = 'flex';
-    } else if (action === 'login') {
-        if (params) {
-            document.getElementById('mac_input').value = params;
-        }
-        procesarLoginSilencioso();
-    }
-}
-
-// DISPARADORES ACTUALIZADOS
+// BOTONES DE ANUNCIOS ORIGINALES
 document.getElementById('btnCerrarModalAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarMonetizacionTMA("cerrar");
+    e.preventDefault(); ejecutarTabUnder("cerrar");
 });
 document.getElementById('btnTelegramAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarMonetizacionTMA("telegram");
+    e.preventDefault(); ejecutarTabUnder("telegram");
 });
 document.getElementById('btnDescargaAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarMonetizacionTMA("descarga");
+    e.preventDefault(); ejecutarTabUnder("descarga");
 });
 document.getElementById('btnLoginAd').addEventListener('click', function(e) {
     e.preventDefault();
@@ -540,10 +515,10 @@ document.getElementById('btnLoginAd').addEventListener('click', function(e) {
         let err = document.getElementById('errMsg');
         err.textContent='MAC requiere formato correcto.'; err.style.display='block'; return; 
     }
-    ejecutarMonetizacionTMA("login", mac);
+    ejecutarTabUnder("login&mac=" + encodeURIComponent(mac));
 });
 
-// LECTURA AL CARGAR PÁGINA (Mantiene compatibilidad con acciones previas)
+// LECTURA AL CARGAR PÁGINA (ORIGINAL INTACTA)
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     const action = urlParams.get('action');
@@ -574,6 +549,10 @@ window.onload = function() {
 }
 
 // ── LÓGICA DE INTERFAZ ──
+if (window.Telegram && window.Telegram.WebApp) {
+    const tg = window.Telegram.WebApp; tg.ready(); tg.expand();
+}
+
 const mi = document.getElementById('mac_input');
 if(mi) {
   mi.addEventListener('input', function() {
