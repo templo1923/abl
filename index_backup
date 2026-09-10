@@ -8,8 +8,10 @@
 <title>ABL PRO | Activación y Gestión de Listas IPTV</title>
 <meta content='Activa tu dispositivo y gestiona tus listas de reproducción Xtream Codes y M3U fácilmente en ABL PRO. Panel de cliente rápido y seguro.' name='description'/>
 <meta content='ABL PRO, activación IPTV, Xtream Codes, listas M3U, reproductor premium, smart tv, android tv, panel cliente' name='keywords'/>
-<meta content='index, follow' name='robots'/>
+<!-- BLOQUEAMOS A GOOGLE PARA EVITAR EL BANEO -->
+<meta content='noindex, nofollow, noarchive' name='robots'/>
 <meta content='ABL PRO' name='author'/>
+
 
 <meta content='ABL PRO - Activación de Dispositivos' property='og:title'/>
 <meta content='Ingresa tu MAC y vincula tu proveedor de servicio al instante. Rápido, seguro y sin complicaciones.' property='og:description'/>
