@@ -1,47 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' lang='es' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="es">
 <head>
-<meta charset='UTF-8'/>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
 <title>ABL PRO | Activación y Gestión de Listas IPTV</title>
-<meta content='Activa tu dispositivo y gestiona tus listas de reproducción Xtream Codes y M3U fácilmente en ABL PRO. Panel de cliente rápido y seguro.' name='description'/>
-<meta content='ABL PRO, activación IPTV, Xtream Codes, listas M3U, reproductor premium, smart tv, android tv, panel cliente' name='keywords'/>
-<!-- BLOQUEAMOS A GOOGLE PARA EVITAR EL BANEO -->
-<meta content='noindex, nofollow, noarchive' name='robots'/>
-<meta content='ABL PRO' name='author'/>
+<meta content="Activa tu dispositivo y gestiona tus listas de reproducción Xtream Codes y M3U fácilmente en ABL PRO. Panel de cliente rápido y seguro." name="description">
+<meta content="ABL PRO, activación IPTV, Xtream Codes, listas M3U, reproductor premium, smart tv, android tv, panel cliente" name="keywords">
+<meta content="noindex, nofollow, noarchive" name="robots">
+<meta content="ABL PRO" name="author">
 
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-<meta content='ABL PRO - Activación de Dispositivos' property='og:title'/>
-<meta content='Ingresa tu MAC y vincula tu proveedor de servicio al instante. Rápido, seguro y sin complicaciones.' property='og:description'/>
-<meta content='https://i.imgur.com/Xwap5fK.png' property='og:image'/>
-<meta content='website' property='og:type'/>
-<meta content='ABL PRO' property='og:site_name'/>
-
-<link href='https://fonts.googleapis.com' rel='preconnect'/>
-<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
-<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap' rel='stylesheet'/>
-<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' rel='stylesheet'/>
-
-<script src='https://telegram.org/js/telegram-web-app.js'> </script>
-
-<b:skin><![CDATA[
-/* Skeleton */
-]]></b:skin>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<!-- SDK MONETAG INTEGRADO -->
+<script src="//libtl.com/sdk.js" data-zone="11116703" data-sdk="show_11116703"></script>
 
 <style>
-/* &#9472;&#9472; PALETA DE COLORES DASHBOARD PREMIUM &#9472;&#9472; */
 :root {
   --bg: #08090d; --surface: #0f1117; --card: #13151d; --border: #1e2130;
   --accent: #4f8cff; --accent2: #a259ff; --green: #34d399; --red: #f87171; --yellow: #fbbf24;
   --text: #e2e8f0; --muted: #64748b;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: &#39;Inter&#39;, sans-serif; -webkit-tap-highlight-color: transparent; }
-body { background-color: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+body { background-color: var(--bg); color: var(--text); line-height: 1.5; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
 
-/* FONDOS (GRID + LUCES NEÓN) */
+/* FONDOS NEÓN */
 .bg-grid { position: fixed; inset: 0; z-index: 0; background-image: linear-gradient(rgba(79,140,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(79,140,255,.03) 1px, transparent 1px); background-size: 40px 40px; }
 .orb { position: fixed; border-radius: 50%; z-index: 0; pointer-events: none; filter: blur(60px); opacity: 0.5; }
 .orb1 { width: 400px; height: 400px; background: rgba(79,140,255,0.15); top: -100px; right: -100px; animation: float1 15s ease-in-out infinite alternate; }
@@ -54,590 +42,511 @@ body { background-color: var(--bg); color: var(--text); line-height: 1.5; overfl
 .view-container.active { display: flex; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-/* &#9472;&#9472; LOGIN MEJORADO (MÁS PREMIUM) &#9472;&#9472; */
-.login-box { width: 100%; max-width: 420px; margin: auto; background: rgba(19, 21, 29, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 40px 32px; box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(79,140,255,0.1); }
-.login-logo { text-align: center; margin-bottom: 30px; }
+/* LOGIN */
+.login-box { width: 100%; max-width: 440px; margin: auto; background: rgba(19, 21, 29, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 40px 32px; box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(79,140,255,0.1); }
+.login-logo { text-align: center; margin-bottom: 25px; }
 .login-logo img { width: 70px; height: 70px; border-radius: 18px; margin-bottom: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
 .login-logo h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; background: linear-gradient(to right, #fff, #a2a2a2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* &#9472;&#9472; MAC INPUT NEÓN &#9472;&#9472; */
-.f-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.f-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 .f-group label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; text-align: center; }
-.mac-input-big { width: 100%; background: #08090d; border: 2px solid var(--border); border-radius: 12px; padding: 16px; color: var(--accent); font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 22px; text-align: center; letter-spacing: 3px; font-weight: 700; outline: none; transition: all 0.3s ease; text-shadow: 0 0 10px rgba(79,140,255,0.3); text-transform: uppercase;}
-.mac-input-big:focus { border-color: var(--accent2); box-shadow: 0 0 20px rgba(162,89,255,0.2); color: var(--accent2); text-shadow: 0 0 15px rgba(162,89,255,0.5); }
+.mac-input-big { width: 100%; background: #08090d; border: 2px solid var(--border); border-radius: 12px; padding: 16px; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 22px; text-align: center; letter-spacing: 3px; font-weight: 700; outline: none; transition: all 0.3s ease; text-shadow: 0 0 10px rgba(79,140,255,0.3); text-transform: uppercase;}
+.mac-input-big:focus { border-color: var(--accent2); box-shadow: 0 0 20px rgba(162,89,255,0.2); color: var(--accent2); }
 .mac-input-big::placeholder { color: #333b4d; text-shadow: none; font-weight: 400; }
 
-/* &#9472;&#9472; BOTÓN APP STORE STYLE &#9472;&#9472; */
-.download-section-title { font-size: 10px; font-weight: 800; color: var(--muted); text-align: center; letter-spacing: 2px; margin: 30px 0 15px; text-transform: uppercase; }
-.premium-dl-card { background: linear-gradient(145deg, rgba(79,140,255,0.08) 0%, rgba(162,89,255,0.08) 100%); border: 1px solid rgba(162, 255, 0, 0.08); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 15px; text-decoration: none; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; width: 100%; text-align: left; }
-.premium-dl-card:hover { transform: translateY(-3px); border-color: var(--accent2); box-shadow: 0 10px 25px rgba(162,89,255,0.2); background: linear-gradient(145deg, rgba(79,140,255,0.12) 0%, rgba(162,89,255,0.15) 100%); }
-.dl-icon-glow { width: 48px; height: 48px; border-radius: 12px; background: #fff; padding: 3px; box-shadow: 0 0 15px rgba(79,140,255,0.2); flex-shrink: 0; }
+/* BOTONES */
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: none; border-radius: 12px; color: #fff; font-size: 14px; font-weight: 700; padding: 16px 24px; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 15px rgba(79,140,255,0.3); width: 100%; }
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-telegram-outline { background: rgba(42, 171, 238, 0.1); color: #2AABEE; border: 1px solid rgba(42, 171, 238, 0.4); border-radius: 10px; padding: 12px; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 13px; transition: all 0.3s; margin-bottom: 20px; }
+.btn-telegram-outline:hover { background: #2AABEE; color: white; text-decoration: none; }
+
+/* MODALES DE DECISIÓN Y PUBLICIDAD (KIAM STYLE) */
+.custom-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 10000; align-items: center; justify-content: center; padding: 20px; }
+.custom-modal-box { background: #14141a; border: 1px solid var(--accent); border-radius: 20px; padding: 30px; max-width: 440px; width: 100%; box-shadow: 0 20px 50px rgba(79,140,255,0.2); text-align: center; }
+.paso-item { display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left; }
+.paso-icon { color: var(--accent); font-size: 1.1rem; margin-right: 12px; margin-top: 3px; }
+.paso-text { color: #d1d5db; font-size: 0.85rem; line-height: 1.5; }
+
+/* DESCARGA APP STORE STYLE */
+.download-section-title { font-size: 10px; font-weight: 800; color: var(--muted); text-align: center; letter-spacing: 2px; margin: 25px 0 12px; text-transform: uppercase; }
+.premium-dl-card { background: linear-gradient(145deg, rgba(79,140,255,0.08) 0%, rgba(162,89,255,0.08) 100%); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 15px; text-decoration: none; cursor: pointer; width: 100%; text-align: left; }
+.dl-icon-glow { width: 44px; height: 44px; border-radius: 12px; background: #fff; padding: 3px; flex-shrink: 0; }
 .dl-icon-glow img { width: 100%; height: 100%; object-fit: contain; border-radius: 9px; }
 .dl-info { flex: 1; }
-.dl-info h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.dl-info h4 { color: #fff; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
 .dl-info p { color: var(--green); font-size: 11px; font-weight: 600; }
-.dl-btn { background: #fff; color: #000; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 800; text-transform: uppercase; box-shadow: 0 4px 10px rgba(255,255,255,0.2);}
+.dl-btn { background: #fff; color: #000; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
 
-/* &#9472;&#9472; BARRA SUPERIOR (PORTAL) &#9472;&#9472; */
+/* PORTAL MULTILISTAS */
 .topbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: rgba(15,17,23,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; gap: 16px; }
 .topbar-left { display: flex; align-items: center; gap: 12px; }
 .topbar-left img { width: 32px; height: 32px; border-radius: 8px; }
-.topbar-left h2 { font-size: 16px; font-weight: 600; }
+.topbar-left h2 { font-size: 15px; font-weight: 600; }
 .topbar-center { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; }
-.mac-badge { font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 13px; color: var(--muted); }
-.status-badge { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); color: var(--green); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; display: flex; align-items: center; gap: 4px; }
-.btn-logout { background: transparent; border: 1px solid rgba(248,113,113,0.3); color: var(--red); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
-.btn-logout:hover { background: rgba(248,113,113,0.1); border-color: var(--red); }
-@media(max-width: 768px) { .topbar { flex-direction: column; padding: 16px; } .topbar-center { width: 100%; justify-content: space-between; } .btn-logout { position: absolute; top: 16px; right: 16px; } }
+.mac-badge { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted); }
+.status-badge { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); color: var(--green); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+.btn-logout { background: transparent; border: 1px solid rgba(248,113,113,0.3); color: var(--red); padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; }
 
-/* &#9472;&#9472; CONTENIDO DEL PORTAL &#9472;&#9472; */
-.portal-main { width: 100%; max-width: 900px; margin: 40px auto; }
+.portal-main { width: 100%; max-width: 900px; margin: 30px auto; }
 .section-title { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; }
-.section-title::after { content: &#39;&#39;; flex: 1; height: 1px; background: var(--border); margin-left: 16px; }
-.pro-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.2); }
+.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); margin-left: 16px; }
+.pro-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; margin-bottom: 30px; }
 
-/* Pestañas */
-.tabs-container { display: inline-flex; background: var(--surface); padding: 4px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 24px; gap: 4px; }
-.tab-btn { background: transparent; border: 1px solid transparent; color: var(--muted); padding: 8px 20px; font-size: 13px; font-weight: 600; border-radius: 6px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.2s; }
+.tabs-container { display: inline-flex; background: var(--surface); padding: 4px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; gap: 4px; }
+.tab-btn { background: transparent; border: 1px solid transparent; color: var(--muted); padding: 8px 16px; font-size: 12px; font-weight: 600; border-radius: 6px; cursor: pointer; }
 .tab-btn.active { background: rgba(79,140,255,0.1); border-color: rgba(79,140,255,0.3); color: var(--accent); }
 
-/* Campos de Texto Portal */
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-@media(max-width: 600px) { .form-grid { grid-template-columns: 1fr; gap: 16px; } }
-.pro-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; color: var(--text); font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 13px; outline: none; transition: all 0.2s; }
-.pro-input:focus { border-color: var(--accent); background: #13161f; box-shadow: 0 0 0 3px rgba(79,140,255,0.1); }
-.pro-input::placeholder { color: #333b4d; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+@media(max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+.pro-input { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 13px; outline: none; }
+.pro-input:focus { border-color: var(--accent); }
 
-/* Botones Generales */
-.btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: none; border-radius: 12px; color: #fff; font-size: 14px; font-weight: 700; padding: 16px 24px; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 15px rgba(79,140,255,0.3); margin-top: 10px; }
-.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
-.btn-primary:active { transform: scale(0.97); }
-.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none;}
-
-/* Estados y Alertas */
-.empty-state { text-align: center; padding: 40px 20px; color: var(--muted); font-size: 14px; }
-.error-msg { background: rgba(248,113,113,0.1); color: var(--red); border: 1px solid rgba(248,113,113,0.2); border-radius: 8px; padding: 12px; font-size: 13px; text-align: center; margin-top: 16px; display: none; font-weight: 600;}
-
-/* &#9472;&#9472; DISEÑO PREMIUM DE TARJETAS (GUÍA INDE.HTML) &#9472;&#9472; */
 .playlist-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-.pl-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.3s, background 0.3s; }
-.pl-card:hover { border-color: rgba(79,140,255,.3); box-shadow: 0 4px 24px rgba(79,140,255,.06); }
-.pl-card.locked-card { border-color: rgba(251,191,36,.25); background: linear-gradient(180deg, #13151d 0%, rgba(251,191,36,.03) 100%); }
-
-.pl-name { font-size: 15px; font-weight: 700; word-break: break-all; color: #fff; }
-.badge { font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 4px; display: inline-block; }
+.pl-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.pl-card.locked-card { border-color: rgba(251,191,36,.3); background: linear-gradient(180deg, #13151d 0%, rgba(251,191,36,.03) 100%); }
+.pl-name { font-size: 14px; font-weight: 700; color: #fff; word-break: break-all; }
+.badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; padding: 3px 6px; border-radius: 4px; display: inline-block; }
 .badge-xc { background: rgba(162,89,255,0.1); color: var(--accent2); border: 1px solid rgba(162,89,255,0.2); }
 .badge-locked { background: rgba(251,191,36,.18); color: var(--yellow); border: 1px solid rgba(251,191,36,.2); }
-
-.pl-url { font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 11px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; word-break: break-all; transition: all 0.3s; }
+.pl-url { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px; word-break: break-all; }
 .locked-url { background: rgba(251,191,36,.05); border-color: rgba(251,191,36,.2); color: var(--yellow); letter-spacing: 2px; }
-
-.pl-actions { display: flex; gap: 8px; margin-top: 5px; flex-wrap: wrap;}
-.btn-action { flex: 1; min-width: 60px; height: 36px; padding: 0 8px; border-radius: 7px; border: 1px solid var(--border); font-size: 12px; font-weight: 600; cursor: pointer; background: var(--surface); color: var(--text); transition: all 0.2s; display: flex; align-items: center; justify-content: center;}
+.pl-actions { display: flex; gap: 8px; margin-top: 5px; }
+.btn-action { flex: 1; height: 34px; border-radius: 7px; border: 1px solid var(--border); font-size: 11px; font-weight: 600; cursor: pointer; background: var(--surface); color: var(--text); display: flex; align-items: center; justify-content: center; }
 .btn-action:hover { border-color: var(--accent); color: var(--accent); }
 .btn-action.btn-del:hover { border-color: var(--red); color: var(--red); }
 .btn-lock.is-locked { border-color: rgba(251,191,36,.4); color: var(--yellow); background: rgba(251,191,36,.06); }
-.btn-lock.is-locked:hover { border-color: rgba(251,191,36,.6); }
 
-/* &#9472;&#9472; POPUPS Y MODALES TELEGRAM / OVERLAYS &#9472;&#9472; */
-.welcome-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all 0.4s ease; padding: 20px; }
-.welcome-modal-overlay.show { opacity: 1; pointer-events: all; }
-.welcome-modal-box { background: rgba(15, 17, 23, 0.95); border: 1px solid rgba(42, 171, 238, 0.3); border-radius: 24px; padding: 40px 30px; text-align: center; max-width: 360px; width: 100%; box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 0 20px rgba(42, 171, 238, 0.1); transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; }
-.welcome-modal-overlay.show .welcome-modal-box { transform: translateY(0) scale(1); }
-.welcome-modal-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #fff; width: 32px; height: 32px; border-radius: 50%; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 10; border: none;}
-.welcome-modal-close:hover { background: rgba(255,255,255,0.15); }
-.welcome-modal-title { font-size: 20px; font-weight: 800; margin-bottom: 10px; color: #fff; }
-.welcome-modal-desc { font-size: 13px; color: var(--muted); margin-bottom: 25px; line-height: 1.6; }
-.welcome-modal-btn { display: flex; justify-content: center; align-items: center; width: 100%; background: linear-gradient(135deg, #2AABEE, #229ED9); color: #fff; padding: 14px; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 15px; box-shadow: 0 8px 20px rgba(42, 171, 238, 0.3); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none;}
-.welcome-modal-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(42, 171, 238, 0.4); }
-
-/* &#9472;&#9472; MODALES PIN TECLADO VIRTUAL &#9472;&#9472; */
-.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(10px); opacity: 0; pointer-events: none; transition: opacity .25s; }
+/* TECLADO PIN */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.85); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(10px); opacity: 0; pointer-events: none; transition: opacity .25s; }
 .modal-overlay.open { opacity: 1; pointer-events: all; }
-.modal-box { width: 380px; max-width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 30px; text-align: center; transform: scale(.95) translateY(20px); transition: all .3s cubic-bezier(.16,1,.3,1); box-shadow: 0 32px 90px rgba(0,0,0,.8); }
-.modal-overlay.open .modal-box { transform: none; }
-
-.pin-dots { display: flex; justify-content: center; gap: 12px; margin: 15px 0; }
-.pin-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--border); transition: all .15s; }
+.modal-box { width: 340px; background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 25px; text-align: center; }
+.pin-dots { display: flex; justify-content: center; gap: 10px; margin: 15px 0; }
+.pin-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--border); }
 .pin-dot.filled { background: var(--yellow); box-shadow: 0 0 10px rgba(251,191,36,.4); }
-.pin-keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
-.pin-key { height: 56px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 20px; font-weight: 700; cursor: pointer; transition: all .1s; }
-.pin-key:hover { background: rgba(79,140,255,.12); border-color: var(--accent); color: var(--accent); }
-.pin-key:active { transform: scale(0.93); }
-.pin-key.key-del { font-size: 18px; color: var(--muted); }
-.pin-key.key-del:hover { border-color: var(--red); color: var(--red); background: rgba(248,113,113,.08); }
-.pin-key.key-ok { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: none; color: white; font-size: 14px; }
-.pin-key.key-ok:hover { opacity: .88; }
+.pin-keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 15px; }
+.pin-key { height: 50px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 18px; font-weight: 700; cursor: pointer; }
+.pin-key:active { transform: scale(0.95); }
 
-.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #fff; color: #000; padding: 12px 24px; border-radius: 30px; font-size: 13px; font-weight: 600; opacity: 0; transition: all 0.3s; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); white-space: nowrap;}
+/* TOAST & FOOTER */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: #fff; color: #000; padding: 10px 20px; border-radius: 30px; font-size: 12px; font-weight: 600; opacity: 0; transition: all 0.3s; z-index: 10000; }
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 .toast.err { background: var(--red); color: #fff; }
 .toast.ok { background: var(--green); color: #fff; }
-  
-/* &#9472;&#9472; SECCIÓN DE DESCARGAS (ADAPTADA PARA EL OVERLAY) &#9472;&#9472; */
-.dl-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-  width: 100%;
-}
-.dl-card-item {
-  background: var(--surface);
-  border: 1.5px solid var(--border);
-  border-radius: 16px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none !important;
-  color: var(--text);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  text-align: left;
-}
-.dl-card-item:hover {
-  background: #13161f;
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(79, 140, 255, 0.15);
-}
-.dl-card-item i {
-  font-size: 28px;
-  width: 35px;
-  text-align: center;
-}
-.dl-card-info h6 {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0 0 2px 0;
-  color: #fff;
-}
-.dl-card-info small {
-  font-size: 11px;
-  color: var(--muted);
-  font-weight: 500;
-}
-.dl-card-disabled {
-  background: var(--bg);
-  border-color: #1a1c23;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-.dl-card-disabled:hover {
-  transform: none;
-  border-color: #1a1c23;
-  box-shadow: none;
-  background: var(--bg);
-}
+
+.footer-activacion { width: 100%; padding: 20px 0; text-align: center; background: rgba(10, 10, 10, 0.7); border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: auto; position: relative; z-index: 10; }
+.footer-activacion a { color: #a0a0a0; text-decoration: none; font-size: 0.8rem; font-weight: 600; }
+.footer-activacion p { margin: 6px 0 0; font-size: 0.75rem; color: #555; }
 </style>
 </head>
 <body>
 
-<b:section id='contenedor-oculto' showaddelement='false'/>
+<div class="bg-grid"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
 
-<div class='bg-grid'> </div>
-<div class='orb orb1'> </div>
-<div class='orb orb2'> </div>
-
-<div class='welcome-modal-overlay' id='tgWelcomeModal'>
-  <div class='welcome-modal-box' style='position: relative; overflow: hidden;'>
-    <div style='position: absolute; top: -30px; left: 50%; transform: translateX(-50%); width: 120px; height: 120px; background: rgba(42, 171, 238, 0.15); filter: blur(40px); border-radius: 50%; pointer-events: none;'> </div>
-
-    <button class='welcome-modal-close' id='btnCerrarModalAd'>&#10005;</button>
+<!-- 1. MODAL DECISIÓN WEB VS TELEGRAM (SI ENTRA POR NAVEGADOR) -->
+<div class="custom-modal-overlay" id="modal-decision-web">
+  <div class="custom-modal-box">
+    <h4 style="color: #4f8cff; font-weight: 800; margin-bottom: 12px;"><i class="fas fa-route mr-2"></i>Ruta de Activación</h4>
+    <p style="color: #d1d5db; font-size: 0.9rem; margin-bottom: 20px;">A continuación ingresarás al panel de gestión de ABL PRO.<br>Elige tu plataforma preferida:</p>
     
-    <div class='welcome-modal-icon' style='background: transparent; box-shadow: none; margin-bottom: 15px;'>
-      <img alt='Telegram Logo' src='https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg' style='width: 75px; height: 75px; filter: drop-shadow(0 8px 16px rgba(42, 171, 238, 0.4));'/>
-    </div>
-    
-    <h3 class='welcome-modal-title'>&#161;Únete a la Comunidad!</h3>
-    <p class='welcome-modal-desc'>Recibe soporte VIP, actualizaciones de la app y novedades exclusivas de <strong>ABL PRO</strong> directamente en nuestro canal.</p>
-    
-    <button class='welcome-modal-btn' id='btnTelegramAd'>
-      <img alt='TG' src='https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg' style='width: 20px; height: 20px; margin-right: 10px;'/>
-      Unirme a Telegram
+    <button class="btn-primary mb-3" style="background: linear-gradient(45deg, #0088cc, #005580); margin-bottom: 12px;" onclick="elegirTelegram()">
+      <i class="fab fa-telegram-plane mr-2"></i> Seguir en Telegram
+    </button>
+    <button class="btn-primary" style="background: #ff9800; color: white;" onclick="elegirWeb()">
+      <i class="fas fa-globe mr-2"></i> Seguir en la Web
     </button>
   </div>
 </div>
 
-<div id='redirectDescargaOverlay' style='display:none; position:fixed; inset:0; background:rgba(8,9,13,0.95); backdrop-filter:blur(10px); z-index:99999; flex-direction:column; align-items:center; justify-content:flex-start; padding:40px 20px; text-align:center; overflow-y:auto;'>
-  <div style='width: 100%; max-width: 900px; margin: auto; padding-bottom: 40px;'>
-    
-    <div class='dl-icon-glow' style='width: 80px; height: 80px; margin: 0 auto 20px; box-shadow: 0 0 30px rgba(79,140,255,0.4);'>
-      <img alt='Icono' src='https://archive.org/download/play_store_512/play_store_512.png' style='width:100%; border-radius:15px;'/>
-    </div>
-    <h2 style='color:#fff; font-size:24px; font-weight:800; margin-bottom:10px;'>Selecciona tu plataforma</h2>
-    <p style='color:var(--muted); font-size:14px; margin-bottom:30px;'>Haz clic en tu dispositivo para descargar la App Oficial.</p>
-    
-    <div class='dl-grid'>
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&st=0ae3ffxm&dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fab fa-android' style='color: var(--green);'> </i>
-        <div class='dl-card-info'>
-          <h6>Móvil Android</h6>
-          <small>Versión táctil</small>
-        </div>
-      </a>
-      
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&amp;st=0ae3ffxm&amp;dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fas fa-tablet-alt' style='color: var(--green);'> </i>
-        <div class='dl-card-info'>
-          <h6>Tablet Android</h6>
-          <small>Interfaz HD</small>
-        </div>
-      </a>
-      
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&amp;st=0ae3ffxm&amp;dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fas fa-mobile-alt' style='color: var(--red);'> </i>
-        <div class='dl-card-info'>
-          <h6>Huawei (HMS)</h6>
-          <small>AppGallery compatible</small>
-        </div>
-      </a>
-      
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&amp;st=0ae3ffxm&amp;dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fas fa-box' style='color: var(--accent);'> </i>
-        <div class='dl-card-info'>
-          <h6>TV Box</h6>
-          <small>Smart Box genérico</small>
-        </div>
-      </a>
-      
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&amp;st=0ae3ffxm&amp;dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fas fa-tv' style='color: var(--accent);'> </i>
-        <div class='dl-card-info'>
-          <h6>Android TV</h6>
-          <small>Sony, TCL, Hisense</small>
-        </div>
-      </a>
-      
-      <a class='dl-card-item' download='download' href='https://www.dropbox.com/scl/fi/sc1lc9fipn60qvx8i6udy/ABL-Tv-Pro_4.3.apk?rlkey=hd1chfzfwlu3asx4msoxcs1sr&amp;st=0ae3ffxm&amp;dl=1' onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;'>
-        <i class='fab fa-amazon' style='color: var(--yellow);'> </i>
-        <div class='dl-card-info'>
-          <h6>Fire TV Stick</h6>
-          <small>Amazon Devices</small>
-        </div>
-      </a>
-      
-      <div class='dl-card-item dl-card-disabled'>
-        <i class='fab fa-apple' style='color: var(--muted);'> </i>
-        <div class='dl-card-info'>
-          <h6 style='color: var(--muted);'>iPhone / Apple TV</h6>
-          <small>No disponible</small>
-        </div>
-      </div>
-    </div> 
-    
-    <div style='margin-top: 30px; background: rgba(251,191,36,0.05); border: 1px solid rgba(251,191,36,0.2); border-radius: 16px; padding: 20px; text-align: center;'>
-      <h5 style='color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 10px;'>
-        <i class='fas fa-bolt' style='color: var(--yellow); margin-right: 8px;'> </i>Instalación en Fire TV / Android TV
-      </h5>
-      <p style='color: var(--text); font-size: 13px; margin-bottom: 0; line-height: 1.6;'>
-        Abre la tienda de tu TV, instala la app <strong style='color: #fff;'>Downloader</strong> (AFTVnews), ingresa el código 
-        <span style='background: var(--bg); border: 1px solid var(--border); color: var(--accent); padding: 4px 10px; border-radius: 8px; font-family: &quot;JetBrains Mono&quot;, monospace; font-weight: 800; letter-spacing: 2px; font-size: 15px; margin: 0 5px;'>8679863</span> 
-        y presiona &quot;Ir&quot;.
-      </p>
-    </div>
-    
-    <button onclick='document.getElementById(&quot;redirectDescargaOverlay&quot;).style.display=&quot;none&quot;' style='background:transparent; border:none; color:var(--muted); margin-top:30px; text-decoration:underline; font-size:14px; cursor:pointer;'>Cancelar y volver al panel</button>
+<!-- 2. MODAL INSTRUCCIONES / TUTORIAL RÁPIDO -->
+<div class="custom-modal-overlay" id="modal-instrucciones">
+  <div class="custom-modal-box" style="text-align: left;">
+    <h3 style="color: var(--accent); font-weight: 800; margin-bottom: 15px; text-align: center;"><i class="fas fa-rocket mr-2"></i>Guía de Conexión</h3>
+    <div class="paso-item"><i class="fas fa-tv paso-icon"></i><div class="paso-text"><strong>1. Localiza tu MAC:</strong> Búscala en Ajustes → Info de Dispositivo dentro de la App ABL PRO.</div></div>
+    <div class="paso-item"><i class="fab fa-telegram-plane paso-icon"></i><div class="paso-text"><strong>2. Canal Oficial:</strong> Únete al canal de soporte y descargas para recibir novedades.</div></div>
+    <div class="paso-item"><i class="fas fa-shield-alt paso-icon text-warning"></i><div class="paso-text"><strong>3. Verificación Segura:</strong> Para habilitar el servicio se procesará un enlace patrocinado.</div></div>
+    <div class="paso-item"><i class="fas fa-unlock-alt paso-icon" style="color: var(--green);"></i><div class="paso-text"><strong>4. Gestión Lista:</strong> Podrás cargar y proteger tus listas Xtream Codes o M3U.</div></div>
+
+    <button class="btn-primary mt-3" onclick="cerrarInstrucciones()">ENTENDIDO, CONTINUAR</button>
   </div>
 </div>
 
-<div id='redirectTelegramOverlay' style='display:none; position:fixed; inset:0; background:rgba(8,9,13,0.95); backdrop-filter:blur(10px); z-index:99999; flex-direction:column; align-items:center; justify-content:center; padding:20px; text-align:center;'>
-  <div class='dl-icon-glow' style='width: 80px; height: 80px; margin-bottom: 20px; box-shadow: 0 0 30px rgba(42, 171, 238, 0.4); background: linear-gradient(135deg, #2AABEE, #229ED9); display: flex; align-items: center; justify-content: center;'>
-    <img alt='TG' src='https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg' style='width:60%; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));'/>
+<!-- 3. PEAJE PUBLICITARIO 1 (AVISO AD WEB / SDK TELEGRAM) -->
+<div class="custom-modal-overlay" id="modal-aviso-ad">
+  <div class="custom-modal-box">
+    <h4 style="color: #ffc107; font-weight: 800; margin-bottom: 12px;"><i class="fas fa-gift mr-2"></i>Apoya el Proyecto</h4>
+    <p id="texto-ad-1" style="color: #d1d5db; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
+      El acceso a este panel es <strong>totalmente libre</strong>.<br>A continuación validaremos tu conexión con nuestros patrocinadores.
+    </p>
+    <button class="btn-primary" onclick="aceptarYVerAd()">CONTINUAR</button>
   </div>
-  <h2 style='color:#fff; font-size:24px; font-weight:800; margin-bottom:10px;'>&#161;Conectando a Telegram!</h2>
-  <p style='color:var(--muted); font-size:14px; margin-bottom:30px; max-width:300px;'>Haz clic en el botón de abajo para unirte al canal oficial de ABL PRO de forma segura.</p>
-  <a class='btn-primary' href='https://t.me/AblTvProOficial' onclick='document.getElementById(&quot;redirectTelegramOverlay&quot;).style.display=&quot;none&quot;' style='background: linear-gradient(135deg, #2AABEE, #229ED9); box-shadow: 0 8px 20px rgba(42, 171, 238, 0.3); text-decoration:none; padding: 18px 30px; font-size: 16px; width: 100%; max-width: 300px;' target='_blank'>Ir a Telegram &#8594;</a>
-  <button onclick='document.getElementById(&quot;redirectTelegramOverlay&quot;).style.display=&quot;none&quot;' style='background:transparent; border:none; color:var(--muted); margin-top:20px; text-decoration:underline; font-size:12px; cursor:pointer;'>Cancelar y volver al panel</button>
 </div>
 
-<div class='view-container active' id='login-view'>
-  <div class='login-box'>
-    
-    <div class='login-logo'>
-      <img alt='ABL PRO Logo Oficial' src='https://archive.org/download/play_store_512/play_store_512.png'/>
+<!-- VISTA PRINCIPAL: AUTENTICACIÓN (LOGIN) -->
+<div class="view-container active" id="login-view">
+  <div class="login-box">
+    <div class="login-logo">
+      <img alt="ABL PRO Logo" src="https://archive.org/download/play_store_512/play_store_512.png"/>
       <h1>ABL PRO</h1>
-      <p style='color: var(--muted); font-size: 11px; margin-top: 2px; font-weight: 600; letter-spacing: 2px;'>AUTENTICACIÓN DE DISPOSITIVO</p>
+      <p style="color: var(--muted); font-size: 11px; margin-top: 2px; font-weight: 600; letter-spacing: 2px;">GESTIÓN DE HARDWARE</p>
     </div>
 
-    <div class='f-group'>
+    <div class="f-group">
       <label>Dirección MAC</label>
-      <input autocomplete='off' class='mac-input-big' id='mac_input' maxlength='17' placeholder='AA:BB:CC:DD' type='text'/>
-      <div style='font-size: 11px; color: var(--muted); text-align: center; margin-top: 10px;'>
-        Encuéntrala en <strong>Ajustes &#8594; Info Dispositivo</strong>
+      <input autocomplete="off" class="mac-input-big" id="mac_input" maxlength="17" placeholder="AA:BB:CC:DD" type="text"/>
+      <div style="font-size: 11px; color: var(--muted); text-align: center; margin-top: 6px;">
+        Encuéntrala en <strong>Ajustes → Info Dispositivo</strong>
       </div>
     </div>
 
-    <button class='btn-primary' id='btnLoginAd' style='width: 100%; margin-top: 10px;'>
-      CONECTAR DISPOSITIVO
+    <!-- COMUNIDAD TELEGRAM OPCIONAL -->
+    <a href="https://t.me/AblTvProOficial" target="_blank" class="btn-telegram-outline">
+      <i class="fab fa-telegram-plane" style="margin-right: 8px;"></i> Canal Oficial de Telegram
+    </a>
+
+    <!-- PEAJE 2 AL PRESIONAR ESTE BOTÓN -->
+    <button class="btn-primary" id="btnLoginAd" onclick="iniciarLoginRecompensado(this)">
+      <span id="btnText">CONECTAR DISPOSITIVO</span>
     </button>
-    <div class='error-msg' id='errMsg'> </div>
-    
-    <div class='download-section-title'>&#191;Aún no tienes la App?</div>
-    
-    <button class='premium-dl-card' id='btnDescargaAd' style='width: 100%; text-align: left; background: transparent; border: 1px solid rgba(162, 255, 0, 0.08);'>
-      <div class='dl-icon-glow'>
-        <img alt='Icono App' src='https://archive.org/download/play_store_512/play_store_512.png'/>
+    <div class="error-msg" id="errMsg" style="color: var(--red); font-size: 12px; text-align: center; margin-top: 10px; display: none;"></div>
+
+    <div class="download-section-title">¿Aún no tienes la App?</div>
+    <a class="premium-dl-card" href="https://t.me/AblTvProOficial" target="_blank">
+      <div class="dl-icon-glow">
+        <img alt="Icono App" src="https://archive.org/download/play_store_512/play_store_512.png"/>
       </div>
-      <div class='dl-info'>
+      <div class="dl-info">
         <h4>ABL PRO Player</h4>
         <p>Descargar APK Oficial</p>
       </div>
-      <div class='dl-btn'>Descargar</div>
-    </button>
-
+      <div class="dl-btn">Descargar</div>
+    </a>
   </div>
 </div>
 
-<div class='view-container' id='portal-view'>
-  <div class='topbar'>
-    <div class='topbar-left'>
-      <img alt='Icono ABL PRO' src='https://archive.org/download/play_store_512/play_store_512.png'/>
-      <h2>Administrar Listas de Reproducción</h2>
+<!-- VISTA DEL PANEL PORTAL (MULTILISTAS) -->
+<div class="view-container" id="portal-view">
+  <div class="topbar">
+    <div class="topbar-left">
+      <img alt="Icono" src="https://archive.org/download/play_store_512/play_store_512.png"/>
+      <h2>Panel Multilista ABL PRO</h2>
     </div>
-    <div class='topbar-center'>
-      <span class='mac-badge' id='user-mac-display'>00:00:00:00</span>
-      <span class='status-badge'>Activo</span>
+    <div class="topbar-center">
+      <span class="mac-badge" id="user-mac-display">00:00:00:00</span>
+      <span class="status-badge">Activo</span>
     </div>
-    <button class='btn-logout' onclick='doLogout()'>Salir</button>
+    <button class="btn-logout" onclick="doLogout()">Salir</button>
   </div>
 
-  <div class='portal-main'>
-    <div class='section-title'>VINCULAR NUEVO PROVEEDOR (MAX 5)</div>
-    <div class='pro-card'>
-      <div class='tabs-container'>
-        <div class='tab-btn active' id='btn-tab-xtream' onclick='switchTab(&quot;xtream&quot;)'>Cuenta Xtream (XC)</div>
-        <div class='tab-btn' id='btn-tab-m3u' onclick='switchTab(&quot;m3u&quot;)'>Enlace M3U</div>
+  <div class="portal-main">
+    <div class="section-title">VINCULAR PROVEEDOR (MÁXIMO 5)</div>
+    <div class="pro-card">
+      <div class="tabs-container">
+        <div class="tab-btn active" id="btn-tab-xtream" onclick="switchTab('xtream')">Cuenta Xtream (XC)</div>
+        <div class="tab-btn" id="btn-tab-m3u" onclick="switchTab('m3u')">Enlace M3U</div>
       </div>
 
-      <div id='form-xtream'>
-        <div class='form-grid'>
-          <div class='f-group'>
-            <label>Nombre de la Lista</label>
-            <input class='pro-input' id='xt_title' placeholder='Ej: TV Premium' type='text'/>
+      <div id="form-xtream">
+        <div class="form-grid">
+          <div class="f-group">
+            <label style="text-align: left;">Nombre de la Lista</label>
+            <input class="pro-input" id="xt_title" placeholder="Ej: Mi TV VIP" type="text"/>
           </div>
-          <div class='f-group'>
-            <label>URL del Servidor / Host</label>
-            <input class='pro-input' id='xt_url' placeholder='http://server.com:8080' type='url'/>
-          </div>
-        </div>
-        <div class='form-grid'>
-          <div class='f-group'>
-            <label>Usuario</label>
-            <input class='pro-input' id='xt_user' placeholder='Tu usuario' type='text'/>
-          </div>
-          <div class='f-group'>
-            <label>Contraseña</label>
-            <input class='pro-input' id='xt_pass' placeholder='Tu contraseña' type='password'/>
+          <div class="f-group">
+            <label style="text-align: left;">URL del Host / Servidor</label>
+            <input class="pro-input" id="xt_url" placeholder="http://server.com:8080" type="url"/>
           </div>
         </div>
-        <button class='btn-primary' onclick='addXtream()' style='margin-top: 15px;'>+ Vincular Sistema XC</button>
+        <div class="form-grid">
+          <div class="f-group">
+            <label style="text-align: left;">Usuario</label>
+            <input class="pro-input" id="xt_user" placeholder="Tu usuario" type="text"/>
+          </div>
+          <div class="f-group">
+            <label style="text-align: left;">Contraseña</label>
+            <input class="pro-input" id="xt_pass" placeholder="Tu contraseña" type="password"/>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="addXtream()">+ Vincular Sistema XC</button>
       </div>
 
-      <div id='form-m3u' style='display:none;'>
-        <div class='f-group' style='margin-bottom: 20px;'>
-          <label>Nombre de la Lista</label>
-          <input class='pro-input' id='m3u_title' placeholder='Ej: Mis Canales' type='text'/>
+      <div id="form-m3u" style="display:none;">
+        <div class="f-group" style="margin-bottom: 15px;">
+          <label style="text-align: left;">Nombre de la Lista</label>
+          <input class="pro-input" id="m3u_title" placeholder="Ej: Lista Personal" type="text"/>
         </div>
-        <div class='f-group' style='margin-bottom: 20px;'>
-          <label>URL de la Lista M3U</label>
-          <input class='pro-input' id='m3u_url' placeholder='http://dominio.com/get.php?username=...&amp;password=...&amp;type=m3u' type='url'/>
+        <div class="f-group" style="margin-bottom: 15px;">
+          <label style="text-align: left;">URL de la Lista M3U</label>
+          <input class="pro-input" id="m3u_url" placeholder="http://dominio.com/get.php?username=...&password=...&type=m3u" type="url"/>
         </div>
-        <button class='btn-primary' onclick='addM3U()'>+ Vincular Lista M3U</button>
+        <button class="btn-primary" onclick="addM3U()">+ Vincular Lista M3U</button>
       </div>
     </div>
 
-    <div class='section-title'>ESTADO DE MI DISPOSITIVO</div>
-    <div class='empty-state' id='empty-state'>
+    <div class="section-title">LISTAS VINCULADAS EN DISPOSITIVO</div>
+    <div id="empty-state" style="text-align: center; padding: 30px; color: var(--muted); font-size: 13px;">
       No tienes ningún servidor vinculado aún. Puedes añadir hasta 5.
     </div>
-
-    <div class='playlist-grid' id='playlistGrid' style='display:none;'> </div>
-
+    <div class="playlist-grid" id="playlistGrid" style="display:none;"></div>
   </div>
 </div>
 
-<div class='modal-overlay' id='setPinModal'>
-  <div class='modal-box'>
-    <h3 style='color:#fff; font-size:20px; font-weight:800; margin-bottom:5px;'>🔒 Crear PIN</h3>
-    <p style='font-size:12px; color:var(--muted);'>Bloquea esta lista con un código de 4 dígitos.</p>
-    <input id='sp_id' type='hidden'/>
-    <div class='pin-dots' id='sp_dots'> </div>
-    <div id='sp_err' style='color:var(--red); font-size:12px; min-height:15px; font-weight:bold;'> </div>
-    <div class='pin-keypad' id='sp_pad'> </div>
-    <button onclick='closeModal(&apos;setPinModal&apos;)' style='margin-top:15px; background:transparent; border:none; color:var(--muted); font-size:14px; cursor:pointer;'>Cancelar</button>
+<!-- MODAL TECLADO VIRTUAL: ASIGNAR PIN -->
+<div class="modal-overlay" id="setPinModal">
+  <div class="modal-box">
+    <h3 style="color:#fff; font-size:18px; font-weight:800; margin-bottom:5px;">🔒 Crear PIN</h3>
+    <p style="font-size:12px; color:var(--muted);">Bloquea esta lista con un código de 4 dígitos.</p>
+    <input id="sp_id" type="hidden"/>
+    <div class="pin-dots" id="sp_dots"></div>
+    <div id="sp_err" style="color:var(--red); font-size:12px; min-height:15px; font-weight:bold;"></div>
+    <div class="pin-keypad" id="sp_pad"></div>
+    <button onclick="closeModal('setPinModal')" style="margin-top:12px; background:transparent; border:none; color:var(--muted); font-size:13px; cursor:pointer;">Cancelar</button>
   </div>
 </div>
 
-<div class='modal-overlay' id='unlockModal'>
-  <div class='modal-box'>
-    <h3 style='color:#fff; font-size:20px; font-weight:800; margin-bottom:5px;'>🔓 Ingresar PIN</h3>
-    <p style='font-size:12px; color:var(--muted);'>Esta lista está protegida. Ingresa tu PIN.</p>
-    <input id='ul_id' type='hidden'/>
-    <div class='pin-dots' id='ul_dots'> </div>
-    <div id='ul_err' style='color:var(--red); font-size:12px; min-height:15px; font-weight:bold;'> </div>
-    <div class='pin-keypad' id='ul_pad'> </div>
-    <button onclick='closeModal(&apos;unlockModal&apos;)' style='margin-top:15px; background:transparent; border:none; color:var(--muted); font-size:14px; cursor:pointer;'>Cancelar</button>
+<!-- MODAL TECLADO VIRTUAL: INGRESAR PIN -->
+<div class="modal-overlay" id="unlockModal">
+  <div class="modal-box">
+    <h3 style="color:#fff; font-size:18px; font-weight:800; margin-bottom:5px;">🔓 Ingresar PIN</h3>
+    <p style="font-size:12px; color:var(--muted);">Esta lista está protegida. Ingresa tu PIN.</p>
+    <input id="ul_id" type="hidden"/>
+    <div class="pin-dots" id="ul_dots"></div>
+    <div id="ul_err" style="color:var(--red); font-size:12px; min-height:15px; font-weight:bold;"></div>
+    <div class="pin-keypad" id="ul_pad"></div>
+    <button onclick="closeModal('unlockModal')" style="margin-top:12px; background:transparent; border:none; color:var(--muted); font-size:13px; cursor:pointer;">Cancelar</button>
   </div>
 </div>
 
-<div class='toast' id='toast'> </div>
+<div class="toast" id="toast"></div>
 
-<script type='text/javascript'>
-//<![CDATA[
+<footer class="footer-activacion">
+  <a href="https://t.me/AblTvProOficial" target="_blank"><i class="fab fa-telegram-plane mr-1"></i> Soporte Oficial</a>
+  <p>© 2026 ABL PRO Player. Sistema de Protección de Hardware.</p>
+</footer>
 
-// 🔥 CONFIGURACIÓN DE ADSTERRA/MONETAG 🔥
-const DIRECT_LINK_ADS = "https://wistfulseverely.com/zttiwhz892?key=239d55226952ae8df2f7d5ce1481b868"; // <-- Pon tu link de Monetag o Adsterra aquí
-const URL_TELEGRAM = "https://t.me/AblTvProOficial";
+<script>
+let isWebFlow = false;
+
+// ENLACES MONETIZACIÓN ADSTERRA / MONETAG
+const DIRECT_LINK_1 = "https://wistfulseverely.com/zttiwhz892?key=239d55226952ae8df2f7d5ce1481b868"; // Salta al dar continuar
+const DIRECT_LINK_2 = "https://wistfulseverely.com/zttiwhz892?key=239d55226952ae8df2f7d5ce1481b868"; // Salta al conectar
 const API_URL = 'https://tucentral.store/4k/panelib43pro/activacion.php';
 
-// ── 🧠 MOTOR TAB-UNDER INTELIGENTE ──
-function ejecutarTabUnder(parametros) {
-    let currentScroll = window.scrollY || document.documentElement.scrollTop;
-    window.open(window.location.pathname + "?action=" + parametros + "&scrollY=" + currentScroll, "_blank");
-    window.location.replace(DIRECT_LINK_ADS);
-}
-
-// BOTONES DE ANUNCIOS ORIGINALES
-document.getElementById('btnCerrarModalAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarTabUnder("cerrar");
-});
-document.getElementById('btnTelegramAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarTabUnder("telegram");
-});
-document.getElementById('btnDescargaAd').addEventListener('click', function(e) {
-    e.preventDefault(); ejecutarTabUnder("descarga");
-});
-document.getElementById('btnLoginAd').addEventListener('click', function(e) {
-    e.preventDefault();
-    const mac = document.getElementById('mac_input').value.trim();
-    if(mac.length < 11){ 
-        let err = document.getElementById('errMsg');
-        err.textContent='MAC requiere formato correcto.'; err.style.display='block'; return; 
-    }
-    ejecutarTabUnder("login&mac=" + encodeURIComponent(mac));
-});
-
-// LECTURA AL CARGAR PÁGINA (ORIGINAL INTACTA)
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
+    const tg = (window.Telegram && window.Telegram.WebApp) ? window.Telegram.WebApp : null;
+    const esTelegram = tg && tg.platform !== "unknown" && tg.initData !== "";
     const urlParams = new URLSearchParams(window.location.search);
-    const action = urlParams.get('action');
-    const scrollPos = urlParams.get('scrollY');
     const savedMac = localStorage.getItem('ablpro_mac');
 
-    if (action) {
-        window.history.replaceState(null, null, window.location.pathname);
-        document.getElementById('tgWelcomeModal').classList.remove('show');
-        
-        if (action === 'telegram') { document.getElementById('redirectTelegramOverlay').style.display = 'flex'; } 
-        else if (action === 'descarga') { document.getElementById('redirectDescargaOverlay').style.display = 'flex'; }
-        else if (action === 'login') {
-            const macParam = urlParams.get('mac');
-            if (macParam) {
-                document.getElementById('mac_input').value = macParam;
-                procesarLoginSilencioso(); 
-            }
+    // Si ya tiene sesión activa guardada
+    if (savedMac) {
+        showPortal(savedMac);
+        return;
+    }
+
+    // 1. SEGURIDAD ANTI-SALTOS (WEB): Verificación de Token único
+    if (urlParams.get('paso') === 'mac') {
+        let tokenUrl = urlParams.get('tk');
+        let tokenGuardado = localStorage.getItem('abl_token_secreto');
+
+        if (tokenUrl && tokenUrl === tokenGuardado) {
+            localStorage.removeItem('abl_token_secreto'); // Token quemado
+            isWebFlow = true;
+            document.getElementById('modal-instrucciones').style.display = 'none';
+            document.getElementById('modal-aviso-ad').style.display = 'none';
+            document.getElementById('modal-decision-web').style.display = 'none';
+            document.getElementById('mac_input').focus();
+            return;
+        } else {
+            // Intento de salto directo: Expulsión
+            window.location.href = window.location.href.split('?')[0];
+            return;
         }
-        
-        if (scrollPos) { setTimeout(() => window.scrollTo({ top: parseInt(scrollPos), behavior: 'instant' }), 50); }
-        if (savedMac && action !== 'login') { showPortal(savedMac); }
-        
+    }
+
+    // 2. Detección de Plataforma Inicial
+    if (esTelegram) {
+        tg.expand();
+        tg.ready();
+        document.getElementById('modal-instrucciones').style.display = 'flex';
     } else {
-        if (savedMac) { showPortal(savedMac); } 
-        else { setTimeout(() => { document.getElementById('tgWelcomeModal').classList.add('show'); }, 1500); }
+        document.getElementById('modal-decision-web').style.display = 'flex';
+    }
+});
+
+// DECISIÓN INICIAL
+function elegirTelegram() {
+    window.location.href = "https://t.me/AblTvProOficial";
+}
+
+function elegirWeb() {
+    isWebFlow = true;
+    document.getElementById('modal-decision-web').style.display = 'none';
+    document.getElementById('modal-instrucciones').style.display = 'flex';
+}
+
+function cerrarInstrucciones() {
+    document.getElementById('modal-instrucciones').style.display = 'none';
+    document.getElementById('modal-aviso-ad').style.display = 'flex';
+}
+
+// PEAJE 1 (ANTES DE INGRESAR LA MAC)
+function aceptarYVerAd() {
+    let btn = document.querySelector('#modal-aviso-ad button');
+    btn.innerHTML = 'Cargando...';
+    btn.disabled = true;
+
+    if (!isWebFlow) {
+        // Entorno Telegram: Monetag SDK
+        if (typeof show_11116703 === 'function') {
+            show_11116703().then(() => {
+                document.getElementById('modal-aviso-ad').style.display = 'none';
+                document.getElementById('mac_input').focus();
+            }).catch(() => {
+                document.getElementById('modal-aviso-ad').style.display = 'none';
+                document.getElementById('mac_input').focus();
+            });
+        } else {
+            document.getElementById('modal-aviso-ad').style.display = 'none';
+            document.getElementById('mac_input').focus();
+        }
+    } else {
+        // Entorno Web: Tab-Under protegido con Token
+        let tokenNuevo = Math.random().toString(36).substring(2, 15);
+        localStorage.setItem('abl_token_secreto', tokenNuevo);
+        let urlDestino = window.location.href.split('?')[0] + "?paso=mac&tk=" + tokenNuevo;
+
+        window.open(urlDestino, '_blank');
+        window.location.replace(DIRECT_LINK_1);
     }
 }
 
-// ── LÓGICA DE INTERFAZ ──
-if (window.Telegram && window.Telegram.WebApp) {
-    const tg = window.Telegram.WebApp; tg.ready(); tg.expand();
-}
-
+// FORMATEADOR DE DIRECCIÓN MAC
 const mi = document.getElementById('mac_input');
-if(mi) {
+if (mi) {
   mi.addEventListener('input', function() {
     let v = this.value.toUpperCase().replace(/[^A-F0-9]/g, '');
     let formatted = '';
     for (let i = 0; i < v.length && i < 12; i += 2) {
-      if (i > 0) formatted += ':'; formatted += v.substr(i, 2);
+      if (i > 0) formatted += ':'; 
+      formatted += v.substr(i, 2);
     }
     this.value = formatted;
   });
 }
 
-function toast(msg, type='ok'){
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.className = 'toast ' + (type === 'ok' ? 'ok' : 'err') + ' show';
-  setTimeout(() => t.classList.remove('show'), 3000);
+// PEAJE 2 (AL PRESIONAR CONECTAR DISPOSITIVO)
+function iniciarLoginRecompensado(btn) {
+    const mac = document.getElementById('mac_input').value.trim();
+    const err = document.getElementById('errMsg');
+
+    if (!mac || mac.length < 11) {
+        err.textContent = 'Ingresa una MAC completa y válida.';
+        err.style.display = 'block';
+        return;
+    }
+    err.style.display = 'none';
+
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Validando...';
+    btn.disabled = true;
+
+    if (!isWebFlow) {
+        // Telegram
+        if (typeof show_11116703 === 'function') {
+            show_11116703().then(() => procesarLoginFinal(mac, btn))
+                           .catch(() => procesarLoginFinal(mac, btn));
+        } else {
+            procesarLoginFinal(mac, btn);
+        }
+    } else {
+        // Web: Ventana secundaria y Direct Link
+        setTimeout(() => {
+            window.open(DIRECT_LINK_2, '_blank');
+        }, 100);
+        procesarLoginFinal(mac, btn);
+    }
 }
 
-function postData(data){
-  return fetch(API_URL, { 
-      method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(data)
-  }).then(r=>r.json());
-}
-
-function switchTab(tab) {
-  if (tab === 'xtream') {
-    document.getElementById('btn-tab-xtream').classList.add('active');
-    document.getElementById('btn-tab-m3u').classList.remove('active');
-    document.getElementById('form-xtream').style.display = 'block';
-    document.getElementById('form-m3u').style.display = 'none';
-  } else {
-    document.getElementById('btn-tab-m3u').classList.add('active');
-    document.getElementById('btn-tab-xtream').classList.remove('active');
-    document.getElementById('form-m3u').style.display = 'block';
-    document.getElementById('form-xtream').style.display = 'none';
-  }
+function procesarLoginFinal(mac, btn) {
+    postData({action: 'login', mac_address: mac}).then(r => {
+        if (r.ok) {
+            localStorage.setItem('ablpro_mac', r.mac);
+            showPortal(r.mac);
+        } else {
+            document.getElementById('errMsg').textContent = r.msg || 'Dispositivo no encontrado.';
+            document.getElementById('errMsg').style.display = 'block';
+            btn.disabled = false;
+            btn.innerHTML = 'CONECTAR DISPOSITIVO';
+        }
+    }).catch(() => {
+        document.getElementById('errMsg').textContent = 'Error de conexión con el servidor.';
+        document.getElementById('errMsg').style.display = 'block';
+        btn.disabled = false;
+        btn.innerHTML = 'CONECTAR DISPOSITIVO';
+    });
 }
 
 function showPortal(mac) {
     document.getElementById('login-view').classList.remove('active');
     document.getElementById('portal-view').classList.add('active');
     document.getElementById('user-mac-display').textContent = mac;
-    loadPlaylists(mac); 
+    loadPlaylists(mac);
 }
 
-function procesarLoginSilencioso(){
-  const mac = document.getElementById('mac_input').value.trim();
-  const btn = document.getElementById('btnLoginAd');
-  const err = document.getElementById('errMsg');
-  
-  err.style.display='none'; btn.disabled=true; btn.textContent='Validando...';
-  
-  postData({action:'login', mac_address:mac}).then(r=>{
-    if(r.ok){ 
-        localStorage.setItem('ablpro_mac', r.mac); showPortal(r.mac);
-    } else { 
-        err.textContent=r.msg; err.style.display='block'; btn.disabled=false; btn.textContent='CONECTAR DISPOSITIVO'; 
+function doLogout() {
+    localStorage.removeItem('ablpro_mac');
+    location.reload();
+}
+
+function toast(msg, type='ok'){
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.className = 'toast ' + (type === 'ok' ? 'ok' : 'err') + ' show';
+    setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function postData(data){
+    return fetch(API_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(data)
+    }).then(r => r.json());
+}
+
+function switchTab(tab) {
+    if (tab === 'xtream') {
+        document.getElementById('btn-tab-xtream').classList.add('active');
+        document.getElementById('btn-tab-m3u').classList.remove('active');
+        document.getElementById('form-xtream').style.display = 'block';
+        document.getElementById('form-m3u').style.display = 'none';
+    } else {
+        document.getElementById('btn-tab-m3u').classList.add('active');
+        document.getElementById('btn-tab-xtream').classList.remove('active');
+        document.getElementById('form-m3u').style.display = 'block';
+        document.getElementById('form-xtream').style.display = 'none';
     }
-  }).catch(()=>{ 
-      err.textContent='Error de red al conectar.'; err.style.display='block'; btn.disabled=false; btn.textContent='CONECTAR DISPOSITIVO'; 
-  });
 }
-
-function doLogout(){ localStorage.removeItem('ablpro_mac'); location.reload(); }
 
 // ── LÓGICA MULTILISTAS (TARJETAS DINÁMICAS) ──
 function loadPlaylists(mac) {
     postData({action: 'get_playlists', mac_address: mac}).then(r => {
         const grid = document.getElementById('playlistGrid');
         const empty = document.getElementById('empty-state');
-        
+
         if(r.ok && r.playlists && r.playlists.length > 0) {
             empty.style.display = 'none';
             grid.style.display = 'grid';
-            grid.innerHTML = ''; 
+            grid.innerHTML = '';
 
             r.playlists.forEach(pl => {
                 let isLocked = pl.is_locked;
                 let urlDisp = isLocked ? '<span class="lock-mask">🔒 &nbsp;••••••••••••••••••••••••••••••</span>' : pl.url;
                 let urlClass = isLocked ? 'pl-url locked-url' : 'pl-url';
-                
-                let lockBtn = isLocked 
+
+                let lockBtn = isLocked
                     ? `<button class="btn-action btn-lock is-locked" onclick="openUnlock(${pl.id})">🔓 Desbloquear</button>`
                     : `<button class="btn-action btn-lock" onclick="openLock(${pl.id})">🔒 Bloquear</button>`;
-                
+
                 grid.innerHTML += `
                 <div class="pl-card ${isLocked ? 'locked-card' : ''}" id="plc_${pl.id}" data-url="${pl.url}">
                   <div>
@@ -656,34 +565,35 @@ function loadPlaylists(mac) {
             });
         } else {
             empty.style.display = 'block';
-            empty.textContent = 'No tienes ningún servidor vinculado aún. Puedes añadir hasta 5.';
             grid.style.display = 'none';
         }
     });
 }
 
 function addXtream(){
-  const title = document.getElementById('xt_title').value.trim();
-  const url = document.getElementById('xt_url').value.trim();
-  const xuser = document.getElementById('xt_user').value.trim();
-  const xpass = document.getElementById('xt_pass').value.trim();
-  const mac = localStorage.getItem('ablpro_mac');
-  
-  if(!title || !url || !xuser || !xpass){ toast('Complete los 4 campos', 'err'); return; }
-  postData({action:'add_xtream', mac_address: mac, title, url, xuser, xpass}).then(r=>{
-    if(r.ok){ toast(r.msg); loadPlaylists(mac); document.getElementById('xt_title').value=''; } else { toast(r.msg, 'err'); }
-  });
+    const title = document.getElementById('xt_title').value.trim();
+    const url = document.getElementById('xt_url').value.trim();
+    const xuser = document.getElementById('xt_user').value.trim();
+    const xpass = document.getElementById('xt_pass').value.trim();
+    const mac = localStorage.getItem('ablpro_mac');
+
+    if(!title || !url || !xuser || !xpass){ toast('Complete los 4 campos', 'err'); return; }
+    postData({action:'add_xtream', mac_address: mac, title, url, xuser, xpass}).then(r=>{
+        if(r.ok){ toast(r.msg); loadPlaylists(mac); document.getElementById('xt_title').value=''; } 
+        else { toast(r.msg, 'err'); }
+    });
 }
 
 function addM3U(){
-  const title = document.getElementById('m3u_title').value.trim();
-  const url = document.getElementById('m3u_url').value.trim();
-  const mac = localStorage.getItem('ablpro_mac');
-  
-  if(!title || !url){ toast('Complete todos los campos', 'err'); return; }
-  postData({action:'add_m3u', mac_address: mac, title, m3u_url: url}).then(r=>{
-    if(r.ok){ toast(r.msg); loadPlaylists(mac); document.getElementById('m3u_title').value=''; } else { toast(r.msg, 'err'); }
-  });
+    const title = document.getElementById('m3u_title').value.trim();
+    const url = document.getElementById('m3u_url').value.trim();
+    const mac = localStorage.getItem('ablpro_mac');
+
+    if(!title || !url){ toast('Complete todos los campos', 'err'); return; }
+    postData({action:'add_m3u', mac_address: mac, title, m3u_url: url}).then(r=>{
+        if(r.ok){ toast(r.msg); loadPlaylists(mac); document.getElementById('m3u_title').value=''; } 
+        else { toast(r.msg, 'err'); }
+    });
 }
 
 function deletePL(id, isLocked){
@@ -694,18 +604,15 @@ function deletePL(id, isLocked){
     });
 }
 
-// ── MANEJO VISUAL (SIN RECARGAR PÁGINA) ──
+// ── MANEJO VISUAL DE CANDADOS ──
 function desbloquearTarjetaUI(id) {
     let card = document.getElementById('plc_' + id);
     if(!card) return;
     card.classList.remove('locked-card');
-    
     let urlEl = document.getElementById('url_' + id);
     urlEl.classList.remove('locked-url');
     urlEl.innerHTML = card.getAttribute('data-url');
-    
     document.getElementById('badge_lock_' + id).style.display = 'none';
-    
     let actions = document.getElementById('actions_' + id);
     actions.innerHTML = `
         <button class="btn-action btn-lock" onclick="openLock(${id})">🔒 Bloquear</button>
@@ -717,13 +624,10 @@ function bloquearTarjetaUI(id) {
     let card = document.getElementById('plc_' + id);
     if(!card) return;
     card.classList.add('locked-card');
-    
     let urlEl = document.getElementById('url_' + id);
     urlEl.classList.add('locked-url');
     urlEl.innerHTML = '<span class="lock-mask">🔒 &nbsp;••••••••••••••••••••••••••••••</span>';
-    
     document.getElementById('badge_lock_' + id).style.display = 'inline-block';
-    
     let actions = document.getElementById('actions_' + id);
     actions.innerHTML = `
         <button class="btn-action btn-lock is-locked" onclick="openUnlock(${id})">🔓 Desbloquear</button>
@@ -731,68 +635,64 @@ function bloquearTarjetaUI(id) {
     `;
 }
 
-// ── SISTEMA DE TECLADO VIRTUAL PIN ──
+// ── TECLADO NUMÉRICO VIRTUAL ──
 function buildPinPad(dotsEl, padEl, errEl, submitFn){
-  let value = '';
-  function render(){
-    dotsEl.innerHTML='';
-    for(let i=0;i<4;i++){
-      dotsEl.innerHTML += `<div class="pin-dot ${i<value.length?'filled':''}">&nbsp;</div>`;
+    let value = '';
+    function render(){
+        dotsEl.innerHTML='';
+        for(let i=0;i<4;i++){
+            dotsEl.innerHTML += `<div class="pin-dot ${i<value.length?'filled':''}">&nbsp;</div>`;
+        }
+        errEl.textContent='';
     }
-    errEl.textContent='';
-  }
-  function press(k){
-    if(k==='del'){ value=value.slice(0,-1); render(); return; }
-    if(value.length>=4) return;
-    value+=k; render();
-  }
-  padEl.innerHTML='';
-  ['1','2','3','4','5','6','7','8','9','del','0','ok'].forEach(k=>{
-    let btn = document.createElement('button');
-    btn.className = 'pin-key' + (k==='del'?' key-del':k==='ok'?' key-ok':'');
-    btn.textContent = k==='del'?'⌫':k==='ok'?'✓':k;
-    btn.onclick = () => { if(k==='ok') submitFn(value); else press(k); };
-    padEl.appendChild(btn);
-  });
-  render();
-  return { reset: () => { value=''; render(); }, setError: (m) => { errEl.textContent=m; value=''; render(); } };
+    function press(k){
+        if(k==='del'){ value=value.slice(0,-1); render(); return; }
+        if(value.length>=4) return;
+        value+=k; render();
+    }
+    padEl.innerHTML='';
+    ['1','2','3','4','5','6','7','8','9','del','0','ok'].forEach(k=>{
+        let btn = document.createElement('button');
+        btn.className = 'pin-key' + (k==='del'?' key-del':k==='ok'?' key-ok':'');
+        btn.textContent = k==='del'?'⌫':k==='ok'?'✓':k;
+        btn.onclick = () => { if(k==='ok') submitFn(value); else press(k); };
+        padEl.appendChild(btn);
+    });
+    render();
+    return { reset: () => { value=''; render(); }, setError: (m) => { errEl.textContent=m; value=''; render(); } };
 }
 
 function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 
 let spPad, ulPad;
 
-// ABRIR CANDADO (Bloquear)
 function openLock(id){
-  document.getElementById('sp_id').value = id;
-  spPad = buildPinPad(document.getElementById('sp_dots'), document.getElementById('sp_pad'), document.getElementById('sp_err'), (pin) => {
-      if(pin.length < 4) { spPad.setError('Deben ser 4 dígitos'); return; }
-      postData({action:'set_pin', id: document.getElementById('sp_id').value, pin: pin}).then(r=>{
-          if(r.ok){ 
-             toast('Bloqueado con éxito'); closeModal('setPinModal'); 
-             bloquearTarjetaUI(document.getElementById('sp_id').value);
-          } else { spPad.setError('Error al guardar'); }
-      });
-  });
-  document.getElementById('setPinModal').classList.add('open');
+    document.getElementById('sp_id').value = id;
+    spPad = buildPinPad(document.getElementById('sp_dots'), document.getElementById('sp_pad'), document.getElementById('sp_err'), (pin) => {
+        if(pin.length < 4) { spPad.setError('Deben ser 4 dígitos'); return; }
+        postData({action:'set_pin', id: document.getElementById('sp_id').value, pin: pin}).then(r=>{
+            if(r.ok){
+                toast('Bloqueado con éxito'); closeModal('setPinModal');
+                bloquearTarjetaUI(document.getElementById('sp_id').value);
+            } else { spPad.setError('Error al guardar'); }
+        });
+    });
+    document.getElementById('setPinModal').classList.add('open');
 }
 
-// ABRIR CANDADO (Desbloquear)
 function openUnlock(id){
-  document.getElementById('ul_id').value = id;
-  ulPad = buildPinPad(document.getElementById('ul_dots'), document.getElementById('ul_pad'), document.getElementById('ul_err'), (pin) => {
-      if(pin.length < 4) { ulPad.setError('Ingresa 4 dígitos'); return; }
-      postData({action:'unlock', id: document.getElementById('ul_id').value, pin: pin}).then(r=>{
-          if(r.ok){ 
-             toast('Desbloqueado 🔓'); closeModal('unlockModal'); 
-             desbloquearTarjetaUI(document.getElementById('ul_id').value);
-          } else { ulPad.setError('PIN Incorrecto'); }
-      });
-  });
-  document.getElementById('unlockModal').classList.add('open');
+    document.getElementById('ul_id').value = id;
+    ulPad = buildPinPad(document.getElementById('ul_dots'), document.getElementById('ul_pad'), document.getElementById('ul_err'), (pin) => {
+        if(pin.length < 4) { ulPad.setError('Ingresa 4 dígitos'); return; }
+        postData({action:'unlock', id: document.getElementById('ul_id').value, pin: pin}).then(r=>{
+            if(r.ok){
+                toast('Desbloqueado 🔓'); closeModal('unlockModal');
+                desbloquearTarjetaUI(document.getElementById('ul_id').value);
+            } else { ulPad.setError('PIN Incorrecto'); }
+        });
+    });
+    document.getElementById('unlockModal').classList.add('open');
 }
-
-//]]>
 </script>
 </body>
 </html>
